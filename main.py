@@ -97,7 +97,7 @@ def hangmanPic(tries):
 
 RAW = randomWord(WORDS)
 WORD = list(RAW) #The random word (actually a list)
-print("----‎‎‎‎----HANGMAN GAME--------")
+print("--------HANGMAN GAME--------")
 print("----------------------------")
 print("----------______------------")
 print("---------|------|-----------")
@@ -149,7 +149,10 @@ while TRIES != 0:
     while True:
       try: #The try statement is used because the index() method of lists in Python raises an exception if it doesn't find a match
 
-        #This is the core of the game logic, where we use a copy of the word to guess and check where is our entry in it, after the index has been saved and used to replace a dash from the displayed word. After this is done we put a "*" at the determined index, and iterate again throught the same process, so we can find every position of the entry in the word to guess. We do this until we run in an exception, which is handled with the except statement
+        #This is the core of the game logic, where we use a copy of the word to guess and check where is our entry in it,
+        #after the index has been saved and used to replace a dash from the displayed word. After this is done we put a "*" at the determined index,
+        #and iterate again throught the same process, so we can find every position of the entry in the word to guess. We do this until we run in an exception,
+        #which is handled with the except statement
 
         index = sample.index(entry)
         DISPLAY_WORD[index] = entry
